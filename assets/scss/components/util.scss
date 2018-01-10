@@ -6,6 +6,10 @@
   flex: 0 0 auto;
 }
 
+.util__flex-eq {
+  flex: 1;
+}
+
 .util__container {
   max-width: 75rem;
   margin-left: auto;

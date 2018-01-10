@@ -1,4 +1,11 @@
 module.exports = {
+  modules: [
+    ['storyblok-nuxt', {accessToken: 'TKznhYJW5Eg5QsDKwAr8oQtt', cacheProvider: 'memory'}]
+  ],
+  plugins: [
+    '~/plugins/components',
+    '~/plugins/filter'
+  ],
   /*
   ** Headers of the page
   */
