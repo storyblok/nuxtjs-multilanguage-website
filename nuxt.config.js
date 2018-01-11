@@ -6,6 +6,9 @@ module.exports = {
     '~/plugins/components',
     '~/plugins/filters'
   ],
+  router: {
+    middleware: 'languageDetection'
+  },
   /*
   ** Headers of the page
   */

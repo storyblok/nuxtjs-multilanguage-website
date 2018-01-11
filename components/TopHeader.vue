@@ -15,10 +15,10 @@
     <nav class="top-header__col top-header__second-navi">
       <ul class="top-header__nav top-header__nav--right">
         <li>
-          <nuxt-link class="top-header__link" to="/en/">English</nuxt-link>
+          <nuxt-link class="top-header__link" to="/en/blog">English</nuxt-link>
         </li>
         <li>
-          <nuxt-link class="top-header__link" to="/en/">German</nuxt-link>
+          <nuxt-link class="top-header__link" to="/de/blog">German</nuxt-link>
         </li>
       </ul>
     </nav>
