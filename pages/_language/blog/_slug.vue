@@ -1,13 +1,24 @@
 <template>
   <section class="util__container">
-    <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component>
+    <div v-editable="story.content" class="blog">
+      <h1>{{ story.content.name }}</h1>
+      <div class="blog__body" v-html="body">
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import marked from 'marked'
+
 export default {
   data () {
-    return { story: { content: {} } }
+    return { story: { content: { body: '' } } }
+  },
+  computed: {
+    body () {
+      return marked(this.story.content.body)
+    }
   },
   mounted () {
     this.$storyblok.init()
@@ -32,3 +43,21 @@ export default {
   }
 }
 </script>
+
+
+<style lang="scss">
+.blog {
+  padding: 0 20px;
+  max-width: 600px;
+  margin: 40px auto 100px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blog__body {
+  line-height: 1.6;
+}
+</style>

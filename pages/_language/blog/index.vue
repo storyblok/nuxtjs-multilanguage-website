@@ -1,6 +1,6 @@
 <template>
   <section class="util__container">
-    <div v-for="blogPost in stories" class="blog__overview">
+    <div v-for="blogPost in data.stories" class="blog__overview">
       <h2>
         <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
           {{ blogPost.content.name }}
@@ -19,7 +19,7 @@
 <script>
 export default {
   data () {
-    return { stories: [] }
+    return { total: 0, data: { stories: [] } }
   },
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
@@ -28,7 +28,7 @@ export default {
       version: version,
       starts_with: `${context.store.state.language}/blog`
     }).then((res) => {
-      return res.data
+      return res
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
