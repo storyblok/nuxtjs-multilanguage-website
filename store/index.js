@@ -17,14 +17,9 @@ const createStore = () => {
       }
     },
     actions: {
-      nuxtServerInit ({ commit }, context) {
-        let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
-        let language = context.params.language || 'en'
-
-        commit('setLanguage', language)
-
-        return this.$storyapi.get(`cdn/stories/${language}/settings`, {
-          version: version
+      loadSettings ({ commit }, context) {
+        return this.$storyapi.get(`cdn/stories/${context.language}/settings`, {
+          version: context.version
         }).then((res) => {
           commit('setSettings', res.data.story.content)
         })
