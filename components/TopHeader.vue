@@ -2,7 +2,7 @@
   <header class="top-header util__flex util__container">
     <nav class="top-header__col">
       <ul class="top-header__nav">
-        <li v-for="navitem in $store.state.settings.main_navi">
+        <li :key="index" v-for="(navitem, index) in $store.state.settings.main_navi">
           <nuxt-link class="top-header__link" :to="navitem.link.cached_url">
             {{ navitem.name }}
           </nuxt-link>
