@@ -3,6 +3,7 @@
     <component v-if="slide" :blok="slide" :is="slide.component"></component>
     <div class="teaser__pag">
       <button @click="handleDotClick(index)"
+              :key="index"
               v-for="(blok, index) in blok.body"
               :class="{'teaser__pag-dot--current': index == currentSlide}"
               class="teaser__pag-dot">Next</button>
