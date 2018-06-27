@@ -20,7 +20,7 @@ export default {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
 
     // Load the JSON from the API
-    return context.app.$storyapi.get('cdn/stories/home', {
+    return context.app.$storyapi.get(`cdn/stories/${context.params.language}/${context.params.slug}`, {
       version: version,
       cv: context.store.state.cacheVersion
     }).then((res) => {

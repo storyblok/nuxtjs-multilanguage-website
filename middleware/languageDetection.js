@@ -6,7 +6,7 @@ export default function ({ app, isServer, route, store, isDev }) {
     store.commit('setCacheVersion', app.$storyapi.cacheVersion)
   }
 
-  if (!store.state.settings._uid || language != store.state.language) {
+  if (!store.state.settings._uid || language !== store.state.language) {
     store.commit('setLanguage', language)
 
     return store.dispatch('loadSettings', {version: version, language: language})
