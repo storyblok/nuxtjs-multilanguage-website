@@ -1,4 +1,4 @@
-# mywebsite
+# A Nuxtjs Website using Storyblok
 
 > Nuxt.js project
 
@@ -19,4 +19,12 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## Setup
+
+1. [Register](https://app.storyblok.com/#!/signup) at Storyblok for free.
+2. Create a new Space and exchange the preview token with your own.
+3. Make sure to have the "Global" Content Entry defined: https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial#create-a-global-settings-content-item
+4. Setup your Blog Content: https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial#build-a-blog-section
+
+
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js) and for the whole Setup you can have a look at [our step by step Guide](https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial)
