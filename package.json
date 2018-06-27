@@ -13,11 +13,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "hoek": "^4.2.1",
     "marked": "^0.3.12",
-    "nuxt": "^1.0.0-rc11",
-    "storyblok-nuxt": "0.0.3",
+    "nuxt-edge": "^2.0.0-25500158.1b46a95",
     "storyblok-js-client": "^1.0.6",
-    "hoek": "^4.2.1"
+    "storyblok-nuxt": "0.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

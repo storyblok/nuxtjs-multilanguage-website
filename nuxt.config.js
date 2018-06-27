@@ -32,11 +32,23 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    optimization: {
+      splitChunks: {
+        chunks: 'async',
+      }
+    },
+    splitChunks: {
+      pages: false,
+      vendor: true,
+      commons: true,
+      runtime: true,
+      layouts: false
+    },
     /*
     ** Run ESLint on save
     */
     extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+      if (ctx.dev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

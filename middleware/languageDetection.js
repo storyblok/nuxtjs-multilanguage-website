@@ -1,8 +1,8 @@
-export default function ({ app, isServer, route, store, isDev }) {
+export default function ({ app, route, store, isDev }) {
   let version = route.query._storyblok || isDev ? 'draft' : 'published'
   let language = route.params.language || 'en'
 
-  if (isServer) {
+  if (process.server) {
     store.commit('setCacheVersion', app.$storyapi.cacheVersion)
   }
 
