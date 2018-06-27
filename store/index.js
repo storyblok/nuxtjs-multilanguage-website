@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      cacheVersion: '',
       language: 'en',
       settings: {
         main_navi: []
@@ -14,6 +15,9 @@ const createStore = () => {
       },
       setLanguage (state, language) {
         state.language = language
+      },
+      setCacheVersion (state, version) {
+        state.cacheVersion = version
       }
     },
     actions: {

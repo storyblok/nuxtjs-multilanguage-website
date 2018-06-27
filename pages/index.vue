@@ -24,7 +24,8 @@ export default {
 
     // Load the JSON from the API
     return context.app.$storyapi.get('cdn/stories/home', {
-      version: version
+      version: version,
+      cv: context.store.state.cacheVersion
     }).then((res) => {
       return res.data
     }).catch((res) => {

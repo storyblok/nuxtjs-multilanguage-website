@@ -36,7 +36,8 @@ export default {
 
     return context.app.$storyapi.get('cdn/links', {
       version: version,
-      starts_with: context.store.state.language
+      starts_with: context.store.state.language,
+      cv: context.store.state.cacheVersion
     }).then((res) => {
       return res.data
     }).catch((res) => {

@@ -34,7 +34,8 @@ export default {
     let endpoint = `cdn/stories/${context.params.language}/blog/${context.params.slug}`
 
     return context.app.$storyapi.get(endpoint, {
-      version: version
+      version: version,
+      cv: context.store.state.cacheVersion
     }).then((res) => {
       return res.data
     }).catch((res) => {

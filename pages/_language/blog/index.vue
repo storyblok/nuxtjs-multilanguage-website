@@ -26,7 +26,8 @@ export default {
 
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
-      starts_with: `${context.store.state.language}/blog`
+      starts_with: `${context.store.state.language}/blog`,
+      cv: context.store.state.cacheVersion
     }).then((res) => {
       return res
     }).catch((res) => {
