@@ -11,8 +11,10 @@ export default {
   },
   mounted () {
     this.$storyblok.init()
-    this.$storyblok.on(['change', 'published'], () => {
-      location.reload(true)
+    this.$storyblok.on(['published', 'change'], (event) => {
+      if (!event.slugChanged) {
+        location.reload(true)
+      }
     })
   },
   asyncData (context) {
