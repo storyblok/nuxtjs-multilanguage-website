@@ -1,3 +1,5 @@
+const StoryblokClient = require('storyblok-js-client')
+
 module.exports = {
   modules: [
     ['storyblok-nuxt', {accessToken: 'TKznhYJW5Eg5QsDKwAr8oQtt', cacheProvider: 'memory'}]
@@ -8,6 +10,26 @@ module.exports = {
   ],
   router: {
     middleware: 'languageDetection'
+  },
+  generate: {
+    routes() {
+      let routes = []
+
+      const StoryblokClientInstance = new StoryblokClient({
+        accessToken: 'TKznhYJW5Eg5QsDKwAr8oQtt'
+      })
+
+      return StoryblokClientInstance.get('cdn/links')
+        .then((res) => {
+          for (i in res.data.links) {
+            routes.push({
+              route: '/' + res.data.links[i].slug
+            })
+          }
+
+          return routes
+        })
+    }
   },
   /*
   ** Headers of the page
