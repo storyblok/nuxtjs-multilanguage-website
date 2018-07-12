@@ -10,6 +10,7 @@
 
 <script>
 import marked from 'marked'
+import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 
 export default {
   data () {
@@ -20,14 +21,7 @@ export default {
       return marked(this.story.content.body)
     }
   },
-  mounted () {
-    this.$storyblok.init()
-    this.$storyblok.on(['published', 'change'], (event) => {
-      if (!event.slugChanged) {
-        location.reload(true)
-      }
-    })
-  },
+  mixins: [storyblokLivePreview],
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     let endpoint = `cdn/stories/${context.params.language}/blog/${context.params.slug}`

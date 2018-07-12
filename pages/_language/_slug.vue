@@ -5,18 +5,13 @@
 </template>
 
 <script>
+import storyblokLivePreview from '@/mixins/storyblokLivePreview'
+
 export default {
   data () {
     return { story: { content: {} } }
   },
-  mounted () {
-    this.$storyblok.init()
-    this.$storyblok.on(['published', 'change'], (event) => {
-      if (!event.slugChanged) {
-        location.reload(true)
-      }
-    })
-  },
+  mixins: [storyblokLivePreview],
   asyncData (context) {
     // Check if we are in the editor mode
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
