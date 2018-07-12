@@ -15,7 +15,7 @@
   "dependencies": {
     "hoek": "^4.2.1",
     "marked": "^0.3.12",
-    "nuxt-edge": "^2.0.0-25500158.1b46a95",
+    "nuxt-edge": "^2.0.0-25523288.2b5c367",
     "storyblok-js-client": "^1.0.12",
     "storyblok-nuxt": "^0.0.5"
   },
