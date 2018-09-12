@@ -1,6 +1,6 @@
 <template>
   <section class="util__container">
-    <div v-for="blogPost in data.stories" class="blog__overview">
+    <div :key="blogPost.content._uid" v-for="blogPost in data.stories" class="blog__overview">
       <h2>
         <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
           {{ blogPost.content.name }}
