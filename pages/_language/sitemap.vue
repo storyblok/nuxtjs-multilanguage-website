@@ -3,13 +3,13 @@
     <div class="sitemap">
       <h1>Sitemap</h1>
 
-      <div v-for="language in tree">
+      <div v-for="language in tree" :key="language.id">
         <ul>
           <sitemap-item
-            v-if="item.item.name != 'Settings'"
-            :key="item.id"
+            v-show="item.item.name !== 'Settings'"
             :model="item"
-            v-for="item in language.children">
+            v-for="item in language.children"
+            :key="item.id">
           </sitemap-item>
         </ul>
       </div>

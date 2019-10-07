@@ -13,7 +13,9 @@ import marked from 'marked'
 
 export default {
   data () {
-    return { story: { content: { body: '' } } }
+    return {
+      story: { content: { body: '' } }
+    }
   },
   computed: {
     body () {
@@ -21,22 +23,30 @@ export default {
     }
   },
   mounted () {
-    this.$storyblok.init()
-    this.$storyblok.on(['change', 'published'], () => {
-      location.reload(true)
+    // Load the JSON from the API
+    this.$storybridge.on(['input', 'published', 'change'], (event) => {
+      if (event.action == 'input') {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content
+        }
+      } else {
+        window.location.reload()
+      }
     })
   },
-  asyncData (context) {
-    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
-    let endpoint = `cdn/stories/${context.params.language}/blog/${context.params.slug}`
-
-    return context.app.$storyapi.get(endpoint, {
-      version: version,
-      cv: context.store.state.cacheVersion
+  async asyncData (context) {
+    return await context.app.$storyapi.get('cdn/stories/home', {
+      version: 'draft'
     }).then((res) => {
-      return res.data
+      return res.response
     }).catch((res) => {
-      context.error({ statusCode: res.response.status, message: res.response.data })
+      if (!res.response) {
+        console.error(res)
+        context.error({ statusCode: 404, message: 'Failed to receive content form api' })
+      } else {
+        console.error(res.response.data)
+        context.error({ statusCode: res.response.status, message: res.response.data })
+      }
     })
   }
 }
