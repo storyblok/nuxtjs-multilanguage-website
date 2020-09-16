@@ -1,25 +1,25 @@
 # A Nuxtjs Website using Storyblok
 
-> Nuxt.js project
+> Sample Nuxt.js project/webstie built with Storyblok as CMS
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn generate
 ```
 
-## Setup
+## Content Setup
 
 1. [Register](https://app.storyblok.com/#!/signup) at Storyblok for free.
 2. Create a new Space and exchange the preview token with your own.
@@ -27,4 +27,4 @@ $ npm run generate
 4. Setup your Blog Content: https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial#build-a-blog-section
 
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js) and for the whole Setup you can have a look at [our step by step Guide](https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial)
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://nuxtjs.org) and for the whole Setup you can have a look at [our step by step Guide](https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial)
