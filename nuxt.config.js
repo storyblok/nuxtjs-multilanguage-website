@@ -35,6 +35,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/components'
   ],
   /*
   ** Auto import components
@@ -52,6 +53,13 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: 'csVfYUOdFMmdfNirvMnGBgtt',
+        cacheProvider: 'memory'
+      }
+    ],
   ],
   /*
   ** Build configuration
