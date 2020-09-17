@@ -12,7 +12,7 @@
         <li>
           <nuxt-link
             class="text-teal-600 hover:underline"
-            to="/en/blog">
+            to="/articles">
             Blog
           </nuxt-link>
         </li>
@@ -28,14 +28,14 @@
         <li>
           <nuxt-link
             class="text-teal-600 hover:underline"
-            to="/en/blog">
+            to="/">
             English
           </nuxt-link>
         </li>
         <li>
           <nuxt-link
             class="text-teal-600 hover:underline"
-            to="/de/blog">
+            to="/de">
             German
           </nuxt-link>
         </li>
