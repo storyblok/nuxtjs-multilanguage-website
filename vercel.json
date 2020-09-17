@@ -8,7 +8,7 @@
       "config": {}
     }
   ],
-  "scope": "samuelsnopko",
+  "scope": "ACCOUNT_NAME",
   "regions": ["bru1"],
   "public": false
 }
