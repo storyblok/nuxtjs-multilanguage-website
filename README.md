@@ -1,4 +1,4 @@
-# A Nuxtjs Website using Storyblok
+# A Nuxtjs Website using Storyblok - An Amazing Multilanguage Website
 
 > Sample Nuxt.js project/webstie built with Storyblok as CMS
 
