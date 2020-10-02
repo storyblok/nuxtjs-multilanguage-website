@@ -1,8 +1,8 @@
-# A Nuxtjs Website using Storyblok
+# A Nuxtjs Website using Storyblok amazing websitehw
 
 > Sample Nuxt.js project/webstie built with Storyblok as CMS
 
-## Build Setup
+## here is the Build Setup
 
 ```bash
 # install dependencies
@@ -12,13 +12,13 @@ $ yarn install
 $ yarn dev
 ```
 
-## Content Setup
+## here is the Content Setup
 
 1. [Register](https://app.storyblok.com/#!/signup) at Storyblok for free.
 2. Create a new Space and exchange the preview token with your own.
 3. Follow our [Complete Guide to Build a Full Blown Multilanguage Website with Nuxt.js](https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial)
 
-## Deploy with Vercel
+## here is the Deploy with Vercel
 
 1. Install Vercel CLI
 2. Replace `ACCOUNT_NAME` with your account name
