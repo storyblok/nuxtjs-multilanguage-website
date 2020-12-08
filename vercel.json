@@ -1,14 +1,9 @@
 {
-  "version": 2,
-  "name": "storyblok-nuxtjs",
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {}
     }
-  ],
-  "scope": "ACCOUNT_NAME",
-  "regions": ["bru1"],
-  "public": false
+  ]
 }
