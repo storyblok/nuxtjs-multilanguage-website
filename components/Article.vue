@@ -2,7 +2,7 @@
   <div
     v-editable="blok"
     class="prose my-24 mx-auto">
-    <h1>{{ blok.name }}</h1>
+    <h1>{{ blok.title }}</h1>
     <p>{{ blok.intro }}</p>
     <rich-text-renderer
       :document="blok.body"

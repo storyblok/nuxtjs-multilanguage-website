@@ -1,5 +1,5 @@
 <template>
-  <div
+  <main
     v-editable="blok"
     class="px-6">
     <component
@@ -7,7 +7,7 @@
       :key="blok._uid"
       :blok="blok"
       :is="blok.component" />
-  </div>
+  </main>
 </template>
 
 <script>

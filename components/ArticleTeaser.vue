@@ -1,14 +1,18 @@
 <template>
-  <nuxt-link
-    :to="articleLink"
-    class="article-teaser block py-4 px-6 border rounded border-gray-500">
-    <h2 class="pt-2 pb-4 text-2xl font-bold">
-      {{ articleContent.name }}
+  <a
+    href="#"
+    class="block py-10">
+    <img :src="resizedImage" class="pb-10"/>
+    <h2 class="pb-6 text-xl">
+      {{ articleContent.title }}
     </h2>
-    <p class="pb-6 leading-relaxed">
+    <p class="pb-6 text-gray-700 leading-loose">
       {{ articleContent.intro }}
     </p>
-  </nuxt-link>
+    <p class="text-gray-700">
+      {{ articleContent.author }}
+    </p>
+  </a>
 </template>
 
 <script>
@@ -17,17 +21,16 @@ export default {
     articleContent: {
       type: Object,
       required: true
-    },
-    articleLink: {
-      type: String,
-      required: true
+    }
+  },
+  computed: {
+    resizedImage() {
+      const imageUrl = this.articleContent.hero_image
+      if (typeof imageUrl !== 'undefined') {
+        return imageUrl.filename.replace('//a.storyblok.com', '//img2.storyblok.com/300x250')
+      }
+      return null
     }
   }
 }
 </script>
-
-<style>
-.article-teaser:hover {
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
-}
-</style>
