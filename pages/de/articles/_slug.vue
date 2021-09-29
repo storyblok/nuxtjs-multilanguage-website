@@ -18,7 +18,9 @@ export default {
   },
   mounted () {
     this.$storybridge(() => {
-      const storyblokInstance = new StoryblokBridge()
+      const storyblokInstance = new StoryblokBridge({
+        language: 'de',
+      })
 
       // Listen to Storyblok's Visual Editor event
       storyblokInstance.on(['input', 'published', 'change'], (event) => {
@@ -41,7 +43,8 @@ export default {
     // Load the JSON from the API
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
 
-    return context.app.$storyapi.get(`cdn/stories/de/articles/${context.params.slug}`, {
+    return context.app.$storyapi.get(`cdn/stories/articles/${context.params.slug}`, {
+      language: 'de',
       version: version
     }).then((res) => {
       return res.data

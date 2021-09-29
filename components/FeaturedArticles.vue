@@ -12,6 +12,7 @@
         class="flex-auto px-8" style="min-width: 33%">
         <article-teaser
           v-if="article.content"
+          :article-link="`${language}/${article.full_slug}`"
           :article-content="article.content"/>
       </li>
     </ul>
@@ -24,6 +25,11 @@ export default {
     blok: {
       type: Object,
       required: true
+    },
+    language: {
+      type: String,
+      required: true,
+      default: "en"
     }
   }
 }

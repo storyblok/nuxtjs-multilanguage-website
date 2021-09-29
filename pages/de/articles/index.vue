@@ -7,7 +7,7 @@
         class="flex-auto px-6" style="min-width: 33%">
         <article-teaser
           v-if="article.content"
-          :article-link="article.full_slug"
+          :article-link="`${article.full_slug}`"
           :article-content="article.content"/>
       </li>
     </ul>

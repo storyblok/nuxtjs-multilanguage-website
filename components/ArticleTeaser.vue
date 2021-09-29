@@ -1,6 +1,6 @@
 <template>
-  <a
-    href="#"
+  <nuxt-link
+    :to="`/${articleLink}`"
     class="block py-10">
     <img :src="resizedImage" class="pb-10"/>
     <h2 class="pb-6 text-xl">
@@ -12,7 +12,7 @@
     <p class="text-gray-700">
       {{ articleContent.author }}
     </p>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>
@@ -20,6 +20,10 @@ export default {
   props: {
     articleContent: {
       type: Object,
+      required: true
+    },
+    articleLink: {
+      type: String,
       required: true
     }
   },
