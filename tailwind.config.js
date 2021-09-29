@@ -5,7 +5,17 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  theme: {},
+  theme: {
+    fontFamily: {
+      'sans': 'Roboto, Arial, sans-serif',
+      'serif': 'Merriweather, Georgia, serif'
+    },
+    extend: {
+      colors: {
+        nuxt: '#2f495e'
+      },
+    },
+  },
   variants: {},
   plugins: [
     require('@tailwindcss/typography')

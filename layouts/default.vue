@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Header />
+  <div class="bg-gray-300">
+    <Header language="en" />
     <Nuxt />
     <Footer />
   </div>
