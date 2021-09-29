@@ -2,9 +2,10 @@
   <section>
     <component
       v-if="story.content.component"
+      language="de/"
       :key="story.content._uid"
       :blok="story.content"
-      :is="story.content.component" />
+      :is="story.content.component"/>
   </section>
 </template>
 
