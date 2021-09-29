@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-300">
+  <div class="bg-gallery">
     <Header language="en" />
     <Nuxt />
     <Footer />

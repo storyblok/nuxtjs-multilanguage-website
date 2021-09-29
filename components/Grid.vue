@@ -1,11 +1,11 @@
 <template>
   <ul
     v-editable="blok"
-    class="flex py-8 mb-6">
+    class="flex py-8 mb-6 container mx-auto">
     <li
       :key="blok._uid"
       v-for="blok in blok.columns"
-      class="flex-auto px-6">
+      class="flex-auto px-6 bg-white">
       <component :blok="blok" :is="blok.component" />
     </li>
   </ul>

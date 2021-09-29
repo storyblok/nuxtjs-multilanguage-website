@@ -2,8 +2,8 @@
   <div
     v-editable="blok"
     class="bg-white-half">
-    <div class="pb-6 pt-16 container mx-auto">
-      <h2 class="text-5xl">{{ blok.headline }}</h2>
+    <div class="pb-16 pt-16 container mx-auto">
+      <h2 class="font-serif text-7xl pb-4 mb-4">{{ blok.headline }}</h2>
       <img
         class="w-full"
         :src="blok.image.filename" />

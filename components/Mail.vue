@@ -2,7 +2,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" width="63" height="61">
     <g fill="none" fillRule="evenodd">
       <path
-        fill="#672E9B"
+        fill="#2f495e"
         d="M34.71 61c16.419 0 25.002-15.139 27.95-30.884C65.607 14.371 48.884 4.042 32.93.481 16.98-3.079 0 13.75 0 30.116S18.292 61 34.71 61z"
       ></path>
       <g

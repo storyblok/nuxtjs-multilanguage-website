@@ -12,7 +12,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        nuxt: '#2f495e'
+        gallery: '#F0F0F0',
+        nuxt: {
+          DEFAULT: '#2f495e',
+          300: '#DDDFE1'
+        },
       },
     },
   },
