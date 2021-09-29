@@ -1,8 +1,7 @@
 <template>
   <section>
-    <h2 class="py-10 text-center font-bold text-4xl">Articles Overview</h2>
-    {{ articles }}
-    <ul class="flex py-6 mb-6">
+    <h2 class="py-10 font-serif text-center font-bold text-5xl">Artikelübersicht</h2>
+    <ul class="flex py-6 mb-6 container mx-auto text-left">
       <li
         v-for="article in stories" :key="article._uid"
         class="flex-auto px-6" style="min-width: 33%">

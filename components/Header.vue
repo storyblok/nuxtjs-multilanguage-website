@@ -34,7 +34,7 @@
             <li>
               <nuxt-link
                 class="block px-4 py-1 md:p-2 lg:px-8"
-                :to="`/${language}/blog`">
+                :to="`/articles`">
                 Blog
               </nuxt-link>
             </li>
@@ -50,7 +50,7 @@
             </li>
             <li>
               <nuxt-link
-                to="/"
+                to="/de"
                 class="block px-4 py-1 md:p-2 rounded-lg lg:px-4"
                 :class="language === 'de' ? 'bg-nuxt text-white':''">
               DE
