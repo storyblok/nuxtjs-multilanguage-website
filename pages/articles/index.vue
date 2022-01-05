@@ -1,7 +1,6 @@
 <template>
   <section>
     <h2 class="py-10 text-center font-bold text-4xl">Articles Overview</h2>
-    {{ articles }}
     <ul class="flex py-6 mb-6">
       <li
         v-for="article in stories" :key="article._uid"
